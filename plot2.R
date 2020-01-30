@@ -18,6 +18,11 @@ png(filename='plot2.png')
 barplot(totalNEI[, Emissions]
         , names = totalNEI[, year]
         , xlab = "Years", ylab = "Emissions"
-        , main = "Emissions over the Years")
+        , main = "Emissions over the Years for Baltimore City (fips=24510)")
 
 dev.off()
+
+
+#baltdata <- NEI[NEI$fips=="24510", ]
+#baltYrEmmData <- aggregate(Emissions ~ year, baltdata, sum)
+#barplot(height=baltYrEmmData$Emissions/1000, names.arg=baltYrEmmData$year, xlab="Year", ylab=" Emissions",main="Baltimore Emmissions by Year", col = "red")

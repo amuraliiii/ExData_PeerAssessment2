@@ -19,3 +19,10 @@ barplot(totalNEI[, Emissions]
         , main = "Emissions over the Years")
 
 dev.off()
+
+
+
+#yearly_emmissions <- aggregate(Emissions ~ year, NEI, sum)
+#barplot(height=yearly_emmissions$Emissions/1000,
+#        names.arg=yearly_emmissions$year, xlab="Years", ylab="Emissions",
+#        main="EMission over the years", col = "red")
